@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/takingyn_date_lo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@id/takingyn_rv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.05">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/takingyn_before_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/taking_btn_disable"
+                android:fontFamily="@font/main_font"
+                android:text="이전"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/takingyn_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginHorizontal="30dp"
+                android:fontFamily="@font/main_font"
+                android:text="10월 26일"
+                android:textColor="@color/black"
+                android:textSize="25dp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/takingyn_next_btn"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/taking_btn_disable"
+                android:fontFamily="@font/main_font"
+                android:text="다음"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/takingyn_rv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/takingyn_pull_btn"
+            app:layout_constraintEnd_toEndOf="@id/takingyn_date_lo"
+            app:layout_constraintStart_toStartOf="@id/takingyn_date_lo"
+            app:layout_constraintTop_toBottomOf="@id/takingyn_date_lo"
+            tools:listitem="@layout/item_takingyn" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/takingyn_pull_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/taking_btn_disable"
+            android:fontFamily="@font/main_font"
+            android:text="약 추출"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/takingyn_rv" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/takingyn_pull_click_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/taking_btn_disable"
+            android:fontFamily="@font/main_font"
+            android:text="약 추출"
+            android:textColor="@color/black"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/takingyn_rv" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

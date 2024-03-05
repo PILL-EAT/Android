@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/unfocus_green"
+    android:id="@+id/enroll_item_lo"
+    android:layout_margin="5dp"
+    android:padding="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/enroll_name_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:id="@+id/enroll_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="유산균"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/main_font" />
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/enroll_category_lo"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/enroll_name_lo"-->
+<!--        app:layout_constraintStart_toStartOf="@id/enroll_name_lo">-->
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="14dp"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:fontFamily="@font/main_font"-->
+<!--            android:text="* 약 종류: "/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/enroll_category_tv"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="프로바이오틱스 유산균"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="16dp"-->
+<!--            android:layout_gravity="center_vertical"-->
+<!--            android:layout_marginStart="5dp"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:fontFamily="@font/main_font" />-->
+<!--    </LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/enroll_date_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/enroll_name_lo"
+        app:layout_constraintStart_toStartOf="@id/enroll_name_lo">
+        <TextView
+            android:id="@+id/enroll_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="월, 수, 금"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/main_font" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enroll_time_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/enroll_date_lo"
+        app:layout_constraintStart_toStartOf="@id/enroll_date_lo">
+        <TextView
+            android:id="@+id/enroll_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10시 00분, 18시 30분"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:textColor="#B41818"
+            android:fontFamily="@font/main_font" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/enroll_iot_lo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/enroll_time_lo"
+        app:layout_constraintStart_toStartOf="@id/enroll_time_lo">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="@font/main_font"
+            android:text="💊 기기 등록: "/>
+        <TextView
+            android:id="@+id/enroll_iot_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="true"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/main_font" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/enroll_remove_btn"
+        android:layout_width="70dp"
+        android:layout_height="50dp"
+        android:background="@drawable/main_btn"
+        android:layout_marginEnd="7dp"
+        android:text="삭제"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        android:fontFamily="@font/main_font"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
